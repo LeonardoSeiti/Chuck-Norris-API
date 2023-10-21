@@ -1,6 +1,24 @@
-.single-file-app{
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Rajdhani&display=swap');
+
+.single-file-app {
+    background-color: #f8a4a4;
     text-align: center;
+    padding: 20px;
+    font-family: 'Rajdhani', sans-serif;
 }
-.button{
+
+/* .button {
     border-radius: 12%;
+} */
+.p{
+    text-justify: auto;
+    
+}
+.joke{
+    font-size: 25px;
+}
+.gif{
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
 }

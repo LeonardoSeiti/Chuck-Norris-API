@@ -20,24 +20,34 @@ function App() {
         setLoading(false);
       });
   }, []);
-  const salvar = ()=>{
-    console.log("salvando")
-    const favoritos = [...jokes]
-    favoritos.push(joke)
-    const str = JSON.stringify(favoritos)
-    
-    localStorage.setItem( "favoritos", str)
-  }
+  // const salvar = () => {
+  //   console.log("salvando")
+  //   const favoritos = [...jokes]
+  //   favoritos.push(joke)
+  //   const str = JSON.stringify(favoritos)
 
+  //   localStorage.setItem("favoritos", str)
+  // }
+  //Por algum motivo o salvar esta quebrando a aplicação
 
   return (
     <div className="single-file-app">
-      <h1>Chuck Norris jokes</h1>
+      <h1>Chuck Norris random jokes</h1>
       <Suspense fallback={<p>Loading...</p>}>
-        <p>{joke}</p>
-        <button onClick={salvar} className="button"><p>Add fav</p></button>
-
-        
+        <iframe className="gif"
+        src="https://giphy.com/embed/BIuuwHRNKs15C" 
+        width="960" 
+        height="540"
+        class="giphy-embed"
+        >
+          </iframe>
+          <p>
+          <a href="https://giphy.com/gifs/chuck-norris-thumbs-up-BIuuwHRNKs15C"></a>
+          </p>
+          <p className="joke">{joke}</p>
+       <p>
+        Modificações em andamento...
+       </p>
       </Suspense>
     </div>
   );
